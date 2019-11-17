@@ -1,0 +1,22 @@
+---
+- hosts: localhost
+  tasks:
+    - name: ensure packages are installed
+      become: true
+      package:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - git
+        - tig
+        - tmux
+        - vim
+        - curl
+        - dos2unix
+        - nginx
+        - tcpdump
+        - ngrep
+        - nmap
+        - nodejs
+        - inotify-tools
+
