@@ -1,0 +1,16 @@
+---
+- hosts: all
+  tasks:
+    - name: get user's homedir
+      local_action: command echo ~
+      register: homedir
+      changed_when: false
+
+    - name: copy files to home dir
+      copy:
+        src: ./files/{{ item }}
+        dest: "{{ homedir.stdout }}"
+      loop:
+        - .vimrc
+        - .gitconfig
+        - .vim

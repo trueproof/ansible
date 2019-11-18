@@ -1,0 +1,9 @@
+[user]
+	name = q
+	email = q@q
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+[core]
+	editor = vim
