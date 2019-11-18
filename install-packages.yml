@@ -13,10 +13,10 @@
         - vim
         - curl
         - dos2unix
-        - nginx
         - tcpdump
         - ngrep
         - nmap
         - nodejs
         - inotify-tools
-
+  roles:
+    - nginx
